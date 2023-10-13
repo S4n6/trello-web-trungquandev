@@ -15,6 +15,7 @@ import Badge from '@mui/material/Badge'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import Profiles from "./Menus/Profiles"
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos'
 
 function AppBar(){
     return (
@@ -24,6 +25,8 @@ function AppBar(){
             display:'flex',
             alignItems:'center',
             justifyContent: 'space-between',
+            gap: 2,
+            overflowX: 'auto'
           }}>
             
             <Box sx={{display: 'flex', alignItems:'center', gap: 2}}>
@@ -33,16 +36,19 @@ function AppBar(){
                     <Typography variant="span" sx={{ fontSize:'1.2rem', fontWeight: 'bold' }}>Trello</Typography>
                 </Box>
 
-                <Workspaces/>
-                <Recent/>
-                <Starred/>
-                <Templates/>
+                <Box sx={{display: {xs: 'none', md:'flex'}, gap: 1}}>
+                    <Workspaces/>
+                    <Recent/>
+                    <Starred/>
+                    <Templates/>
+                    <Button variant="outlined" startIcon={<AddToPhotosIcon/>}>Create</Button>
+                </Box>
+               
 
-                <Button variant="outlined">Create</Button>
             </Box>
 
             <Box sx={{display: 'flex', alignItems:'center', gap: 2}}>  
-                <TextField id="outlined-search" label="Search..." type="search" size="small"/>
+                <TextField id="outlined-search" label="Search..." type="search" size="small" sx={{minWidth: '120px'}}/>
                 <ModeSelect/>
 
                 <Tooltip title="Notifications">
