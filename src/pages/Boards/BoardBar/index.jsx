@@ -12,6 +12,8 @@ import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 
+
+
 const MENU_STYLE = {
   color: 'primary.main',
   gbColor: 'white',
@@ -84,7 +86,20 @@ function BoardBar(){
 
             <Box sx={{display: 'flex', alignItems:'center', gap: 2}}>
             <Button variant="outlined" startIcon={<PersonAddIcon/>}>Create</Button>
-            <AvatarGroup max={4}>
+            
+            <AvatarGroup 
+            max={2}
+            sx={{    
+              color: 'white',
+              cursor: 'pointer',
+            }}
+            >
+              <Tooltip title='sang'>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              </Tooltip>
+              <Tooltip title='sang'>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              </Tooltip>
               <Tooltip title='sang'>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
               </Tooltip>
