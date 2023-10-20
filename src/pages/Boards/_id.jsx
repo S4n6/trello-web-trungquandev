@@ -2,13 +2,14 @@ import Container from '@mui/material/Container'
 import BoardBar from './BoardBar'
 import BoardContent from './BoardContent'
 import AppBar from '~/components/AppBar'
+import { mockData } from '~/api/mock-data'
 
 function Board(){
     return (
         <Container disableGutters maxWidth={false} sx={{height: '100vh'}}>
             <AppBar/>
-            <BoardBar/>
-            <BoardContent/>
+            <BoardBar board = {mockData.board}/>
+            <BoardContent board = {mockData.board}/>
         </Container>
       )
 }

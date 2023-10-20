@@ -29,7 +29,8 @@ const MENU_STYLE = {
 
 }
 
-function BoardBar(){
+function BoardBar({board}){
+    
     return(
         <Box sx={{
             width:'100%',
@@ -46,14 +47,14 @@ function BoardBar(){
               <Chip 
                 sx={MENU_STYLE}
                 icon={<DashboardIcon />} 
-                label="Dashboard" 
+                label= {board?.title} 
                 clickable
               />
 
               <Chip 
                 sx={MENU_STYLE}
                 icon={<VpnLockIcon />} 
-                label="Public/Private Workspace" 
+                label= {board?.type}
                 clickable
               />
 
