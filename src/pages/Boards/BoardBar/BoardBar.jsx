@@ -10,7 +10,7 @@ import AvatarGroup from '@mui/material/AvatarGroup'
 import Tooltip from "@mui/material/Tooltip"
 import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
-
+import { capitalizeFirstLetter } from "~/utils/formatters"
 
 
 
@@ -54,7 +54,7 @@ function BoardBar({board}){
               <Chip 
                 sx={MENU_STYLE}
                 icon={<VpnLockIcon />} 
-                label= {board?.type}
+                label= {capitalizeFirstLetter(board?.type)}
                 clickable
               />
 
